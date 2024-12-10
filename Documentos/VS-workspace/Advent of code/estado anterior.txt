@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include "vetores.h"
+#include <algorithm>
+
+using namespace std;
+
+
+int main(){
+    
+    sort(lista_esquerda.begin(), lista_esquerda.end());
+    sort(lista_direita.begin(), lista_direita.end());
+
+/* 
+    for(int i = 0; i < lista_esquerda.size(); i++){
+        cout << lista_esquerda[i] << " " << lista_direita[i] << "\n" ;
+        ordenado_comparado.emplace_back(lista_esquerda[i] - lista_direita[i]);
+        
+    };*/
+    
+    int total = 0;
+
+    for(int i = 0; i < lista_direita.size(); i++){
+        
+        int resultado = lista_esquerda[i] - lista_direita[i];
+
+        if(resultado < 0){
+            ordenado_comparado.emplace_back(resultado * -1);
+        } 
+        else {
+            ordenado_comparado.emplace_back(resultado);
+        };   
+        total = total + resultado;
+        
+    };
+    
+    
+    cout << total;
+   /* for(int i = 0; i < lista_direita.size(); i++){
+        cout << lista_direita[i] << "\n";
+    };*/
+
+
+
+//este é o array1
+ 
+
+
+};
